@@ -1,0 +1,1047 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <meta name="description" content="文化首勝" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="文化首勝" />
+    <meta property="og:description" content="文化首勝" />
+    <meta property="og:image" content="" />
+    <title>文化首勝 - 人生的第一場勝利</title>
+    <style>
+      :root {
+        max-height: 100dvh;
+        width: 100%;
+        overflow-x: hidden;
+        font-family:
+          "Bebas Neue", "Microsoft JhengHei", "Noto Sans TC", Arial, Helvetica;
+      }
+
+      img {
+        width: 100%;
+        max-width: fit-content;
+      }
+
+      .animate-fade {
+        animation-name: fade-lr;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+      }
+
+      .with-triangle {
+        position: relative;
+      }
+
+      .active-button {
+        border-color: white !important;
+        background-color: transparent !important;
+        pointer-events: none;
+      }
+
+      .swiper-img {
+        position: absolute;
+        opacity: 0;
+        transform: translateY(10%);
+        transition: 0.8s ease-in-out;
+      }
+
+      .swiper-img > img {
+        height: 0;
+      }
+
+      .swiper-img::after {
+        display: none;
+      }
+
+      .swiper-img.active-img {
+        position: relative;
+        z-index: 2;
+        opacity: 1;
+        transform: translateY(0);
+        transition: 0.8s ease-in-out;
+      }
+
+      .swiper-img.active-img::after {
+        display: block;
+      }
+
+      .swiper-img.active-img > img {
+        height: 100%;
+      }
+
+      .with-triangle::after {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: 10px solid white;
+        border-left: 10px solid transparent;
+      }
+
+      @keyframes fade-lr {
+        0% {
+          transform: translateX(-10px);
+        }
+
+        25% {
+          transform: translateX(10px);
+        }
+
+        50% {
+          transform: translateX(-10px);
+        }
+
+        75% {
+          transform: translateX(10px);
+        }
+
+        100% {
+          transform: translateX(-10px);
+        }
+      }
+
+      .with-stable-padding {
+        padding: 3rem 1rem;
+      }
+
+      @media (min-width: 1024px) {
+        .with-stable-padding {
+          padding: 6rem 8rem;
+        }
+      }
+
+      @media (min-width: 1280px) {
+        .text-vertical {
+          writing-mode: vertical-rl;
+        }
+
+        .xl-with-stable-padding {
+          padding: 10rem 12rem;
+        }
+      }
+
+      @media (min-width: 1536px) {
+        .with-stable-padding {
+          padding: 10rem 12rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="sr-only">
+      <h1>文化首勝</h1>
+    </header>
+    <main class="max-w-full overflow-x-hidden max-md:pb-16">
+      <section id="section-1" class="relative">
+        <picture class="xl:max-h-dvh">
+          <source
+            media="(min-width: 1280px)"
+            srcset="/assets/kv-bg-desktop.webp"
+          />
+          <img src="./assets/kv-bg-mobile.webp" alt="bg" />
+        </picture>
+        <img
+          src="./assets/kv-float.webp"
+          alt="float-deco"
+          data-aos="fade-left"
+          data-aos-delay="500"
+          data-aos-anchor="#section-1"
+          class="absolute bottom-0 right-0 z-10 max-w-[28%] object-cover xl:max-w-60"
+        />
+        <img
+          data-aos="fade"
+          data-aos-delay="500"
+          data-aos-anchor="#section-1"
+          src="./assets/kv-gradient-desktop.webp"
+          alt="gradient"
+          class="absolute inset-0 hidden xl:block"
+        />
+        <div
+          class="absolute z-20 flex flex-col items-center max-xl:inset-0 xl:left-[8%] xl:top-[25%] xl:max-w-[40%]"
+        >
+          <img
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-anchor="#section-1"
+            src="./assets/文化首勝logo.svg"
+            alt="文化首勝"
+            class="mt-32 max-w-[85%] md:mt-48 xl:mt-0"
+          />
+          <div class="mt-10 text-center text-white md:mt-24 xl:mt-12">
+            <h2
+              data-aos="fade-up"
+              data-aos-delay="500"
+              data-aos-anchor="#section-1"
+              class="text-4xl font-semibold md:text-6xl/tight"
+            >
+              人生的第一場勝利
+            </h2>
+            <h3
+              data-aos="fade-up"
+              data-aos-delay="700"
+              data-aos-anchor="#section-1"
+              class="mt-4 text-3xl font-semibold md:text-5xl/tight"
+            >
+              台元 ╳ 昌益 科園首席
+            </h3>
+          </div>
+        </div>
+      </section>
+
+      <section id="section-2" class="relative">
+        <img
+          src="./assets/s1-bg-desktop.webp"
+          alt="s1-bg"
+          class="min-h-[70dvh] object-cover object-[25%]"
+        />
+        <img
+          data-aos="fade"
+          data-aos-delay="300"
+          data-aos-anchor="#section-2"
+          src="./assets/s1-gradient-desktop.webp"
+          alt="s1-gradient-desktop"
+          class="absolute inset-0 hidden h-full object-cover xl:block"
+        />
+        <div class="absolute inset-0 bg-[rgba(28,42,148,0.6)] xl:hidden"></div>
+        <div
+          class="with-stable-padding absolute inset-0 xl:ms-auto xl:flex xl:max-w-[50%] xl:flex-col xl:items-end xl:justify-center xl:text-end"
+        >
+          <p
+            data-aos="fade-up"
+            data-aos-delay="500"
+            data-aos-anchor="#section-2"
+            class="font-semibold tracking-wider text-red-600"
+          >
+            EVERY SUCCESSFUL PERSON HAS<br />THEIR OWN STARTING POINT
+          </p>
+          <p
+            data-aos="fade-up"
+            data-aos-delay="700"
+            data-aos-anchor="#section-2"
+            class="py-6 text-3xl font-semibold text-white xl:py-12 xl:text-5xl/tight"
+          >
+            每位成功人士<br />都有屬於自己的起點
+          </p>
+          <p
+            data-aos="fade-up"
+            data-aos-delay="900"
+            data-aos-anchor="#section-2"
+            class="max-w-[95%] text-[12px]/relaxed text-gray-400"
+          >
+            人生的第一場勝利，會成就一雙翱翔未來的翅膀與無限可能。新竹是一座科技新城，作為科技人的嚮往，從起點到通往世界舞台的道路，每一步，都將有家人與愛相伴同行。在聚焦城市前景之前，先看見內心蘊含的初心之美。
+          </p>
+        </div>
+      </section>
+
+      <section id="section-3" class="overflow-x-auto xl:overflow-hidden">
+        <div
+          class="relative flex aspect-[1/0.7] size-full min-w-[1200px] max-w-full bg-[url('./assets/aerial.webp')] bg-cover bg-center bg-no-repeat lg:min-w-[2000px] xl:min-w-[unset]"
+        >
+          <div class="sticky left-0 top-0 mt-10 w-dvw text-center text-white">
+            <h2
+              data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-anchor="#section-3"
+              class="py-6 text-3xl font-semibold xl:text-4xl 2xl:py-10 2xl:text-5xl"
+            >
+              科技競速首位 掌握致勝關鍵
+            </h2>
+            <p
+              data-aos="fade-up"
+              data-aos-delay="500"
+              data-aos-anchor="#section-3"
+              class="tracking-widest xl:text-lg 2xl:text-xl"
+            >
+              中正西路商圈 ╳ 科技雙園引擎
+            </p>
+          </div>
+          <div
+            class="mask absolute left-0 top-0 z-10 size-full overscroll-contain bg-black/30 lg:hidden"
+          >
+            <img
+              src="./assets/swipe.svg"
+              alt="左右滑動"
+              class="animate-fade sticky left-1/2 top-1/2 size-16 -translate-x-1/2 -translate-y-1/2"
+            />
+          </div>
+        </div>
+      </section>
+
+      <div
+        class="with-stable-padding relative grid gap-y-14 bg-[url(./assets/bg-cover.webp)] bg-cover bg-bottom bg-no-repeat xl:px-0"
+      >
+        <section id="section-4" class="grid gap-y-14">
+          <div
+            class="xl:grid xl:grid-cols-5 xl:items-center xl:gap-x-16 2xl:gap-x-24"
+          >
+            <div
+              id="swiper-1"
+              data-aos="fade-left"
+              data-aos-delay="300"
+              data-aos-anchor="#section-4"
+              class="relative mb-12 xl:order-last xl:col-span-3 xl:pl-6"
+            >
+              <div
+                class="swiper-controller absolute inset-0 z-[2] flex translate-x-8 translate-y-6 flex-row-reverse items-end justify-end gap-4 bg-gradient-to-tr from-[#2213B5] to-[#7412AE] pb-1.5 pl-3 xl:translate-x-10 xl:translate-y-7 xl:scale-x-110 xl:flex-col xl:items-start xl:justify-end xl:pb-10 xl:pl-1.5 2xl:pl-3"
+              >
+                <button
+                  type="button"
+                  data-idx="2"
+                  class="swiper-button size-3 rounded-full border-2 border-transparent bg-white"
+                ></button>
+                <button
+                  type="button"
+                  data-idx="1"
+                  class="swiper-button size-3 rounded-full border-2 border-transparent bg-white"
+                ></button>
+                <button
+                  type="button"
+                  data-idx="0"
+                  class="swiper-button active-button size-3 rounded-full border-2 border-transparent bg-white"
+                ></button>
+              </div>
+              <div
+                class="active-img swiper-img after:absolute after:bottom-0 after:right-0 after:p-1.5 after:text-xl after:text-white after:content-[attr(data-caption)]"
+                data-idx="0"
+                data-caption="台元科技園區"
+              >
+                <img
+                  src="./assets/台元科技園區-1.webp"
+                  alt="台元科技園區"
+                  class="aspect-[3/2] object-cover object-center"
+                />
+              </div>
+              <div
+                class="swiper-img after:absolute after:bottom-0 after:right-0 after:p-1.5 after:text-xl after:text-white after:content-[attr(data-caption)]"
+                data-idx="1"
+                data-caption="台元科技園區"
+              >
+                <img
+                  src="./assets/台元科技園區-2.webp"
+                  alt="台元科技園區"
+                  class="aspect-[3/2] object-cover object-center"
+                />
+              </div>
+              <div
+                class="swiper-img after:absolute after:bottom-0 after:right-0 after:p-1.5 after:text-xl after:text-white after:content-[attr(data-caption)]"
+                data-idx="2"
+                data-caption="台元科技園區"
+              >
+                <img
+                  src="./assets/台元科技園區-3.webp"
+                  alt="台元科技園區"
+                  class="aspect-[3/2] object-cover object-center"
+                />
+              </div>
+            </div>
+            <div
+              data-aos="fade-right"
+              data-aos-delay="500"
+              data-aos-anchor="#section-4"
+              class="xl:col-span-2 xl:pl-20"
+            >
+              <p
+                class="text-4xl font-semibold text-[#3711DE] xl:text-[5rem]/[1] xl:font-extrabold"
+              >
+                REGIONAL<br />ADVANTAGE
+              </p>
+              <p
+                class="mt-3 flex h-full items-stretch gap-3 tracking-wider text-white after:my-1.5 after:grow after:bg-gradient-to-r after:from-red-500 after:to-[#611051] after:content-[''] xl:h-auto xl:text-base"
+              >
+                TOP ENTERPRISES SETTLE
+              </p>
+              <h2
+                class="my-6 text-2xl font-semibold tracking-widest text-white xl:my-12 xl:text-3xl/snug"
+              >
+                騎車速抵 12萬坪IC重鎮<br />台元科技園區
+              </h2>
+              <div
+                class="with-triangle bg-gradient-to-tr from-[#2213B5] to-[#7412AE] p-4 text-white xl:p-8 xl:text-[14px]/loose"
+              >
+                擁有超過300家國內外頂尖企業進駐的台元科技園區，離家騎車四分鐘。園內廠辦全新落成，科技門面大器輝煌，為預計移入人才提供豐沛就業機會。
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="xl:grid xl:grid-cols-5 xl:items-center xl:gap-x-16 2xl:gap-x-24"
+          >
+            <div
+              data-aos="fade-right"
+              data-aos-delay="700"
+              data-aos-anchor="#section-4"
+              class="relative mb-12 xl:col-span-3 xl:pr-6"
+            >
+              <div
+                class="absolute inset-0 flex -translate-x-10 translate-y-7 flex-col bg-gradient-to-tr from-[#2213B5] to-[#7412AE] pb-10 xl:scale-x-110"
+              ></div>
+              <div
+                class="relative z-[2] after:absolute after:bottom-0 after:right-0 after:p-1.5 after:text-xl after:text-white after:content-[attr(data-caption)]"
+                data-caption="昌益科技產發園區"
+              >
+                <img
+                  src="./assets/昌益科技產發園區.webp"
+                  alt="昌益科技產發園區"
+                  class="aspect-[3/2] object-cover object-center"
+                />
+              </div>
+            </div>
+            <div
+              data-aos="fade-left"
+              data-aos-delay="900"
+              data-aos-anchor="#section-4"
+              class="xl:order-last xl:col-span-2 xl:pr-20"
+            >
+              <p
+                class="text-4xl font-semibold text-[#3711DE] xl:text-end xl:text-[5rem]/[1] xl:font-extrabold"
+              >
+                LIVE<br />EFFICIENTLY
+              </p>
+              <p
+                class="mt-3 flex h-full items-stretch gap-3 tracking-wider text-white after:my-1.5 after:grow after:bg-gradient-to-r after:from-red-500 after:to-[#611051] after:content-[''] xl:h-auto xl:flex-row-reverse xl:text-base xl:after:rotate-180"
+              >
+                CALM WORK
+              </p>
+              <h2
+                class="my-6 text-2xl font-semibold tracking-widest text-white xl:my-12 xl:text-end xl:text-3xl/snug"
+              >
+                散步上班 從容打卡<br />昌益科技產發園區
+              </h2>
+              <div
+                class="with-triangle bg-gradient-to-tr from-[#2213B5] to-[#7412AE] p-4 text-white xl:p-8 xl:text-[14px]/loose"
+              >
+                為自己安排早晨時光，300米散步距離抵達昌益科技產發園區，掌握比他人更多的自由時間，為自我人生目標制定高效率計畫。
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="xl:grid xl:grid-cols-5 xl:items-center xl:gap-x-16 2xl:gap-x-24"
+          >
+            <div
+              data-aos="fade-left"
+              data-aos-delay="1200"
+              data-aos-anchor="#section-4"
+              id="swiper-2"
+              class="relative mb-12 xl:order-last xl:col-span-3 xl:pl-6"
+            >
+              <div
+                class="swiper-controller absolute inset-0 z-[2] flex translate-x-8 translate-y-6 flex-row-reverse items-end justify-end gap-4 bg-gradient-to-tr from-[#2213B5] to-[#7412AE] pb-1.5 pl-3 xl:translate-x-10 xl:translate-y-7 xl:scale-x-110 xl:flex-col xl:items-start xl:justify-end xl:pb-10 xl:pl-1.5 2xl:pl-3"
+              >
+                <button
+                  type="button"
+                  data-idx="3"
+                  class="swiper-button size-3 rounded-full border-2 border-transparent bg-white"
+                ></button>
+                <button
+                  type="button"
+                  data-idx="2"
+                  class="swiper-button size-3 rounded-full border-2 border-transparent bg-white"
+                ></button>
+                <button
+                  type="button"
+                  data-idx="1"
+                  class="swiper-button size-3 rounded-full border-2 border-transparent bg-white"
+                ></button>
+                <button
+                  type="button"
+                  data-idx="0"
+                  class="swiper-button active-button size-3 rounded-full border-2 border-transparent bg-white"
+                ></button>
+              </div>
+              <div
+                class="active-img swiper-img after:absolute after:bottom-0 after:right-0 after:p-1.5 after:text-xl after:text-white after:content-[attr(data-caption)]"
+                data-idx="0"
+                data-caption="竹北火車站"
+              >
+                <img
+                  src="./assets/竹北火車站.webp"
+                  alt="竹北火車站"
+                  class="aspect-[3/2] object-cover object-center"
+                />
+              </div>
+              <div
+                class="swiper-img after:absolute after:bottom-0 after:right-0 after:p-1.5 after:text-xl after:text-white after:content-[attr(data-caption)]"
+                data-idx="1"
+                data-caption="竹北國小"
+              >
+                <img
+                  src="./assets/竹北國小.webp"
+                  alt="竹北國小"
+                  class="aspect-[3/2] object-cover object-center"
+                />
+              </div>
+              <div
+                class="swiper-img after:absolute after:bottom-0 after:right-0 after:p-1.5 after:text-xl after:text-white after:content-[attr(data-caption)]"
+                data-idx="2"
+                data-caption="竹北國中"
+              >
+                <img
+                  src="./assets/竹北國中.webp"
+                  alt="竹北國中"
+                  class="aspect-[3/2] object-cover object-center"
+                />
+              </div>
+              <div
+                class="swiper-img after:absolute after:bottom-0 after:right-0 after:p-1.5 after:text-xl after:text-white after:content-[attr(data-caption)]"
+                data-idx="3"
+                data-caption="義民高中"
+              >
+                <img
+                  src="./assets/義民高中.webp"
+                  alt="義民高中"
+                  class="aspect-[3/2] object-cover object-center"
+                />
+              </div>
+            </div>
+            <div
+              data-aos="fade-right"
+              data-aos-delay="1500"
+              data-aos-anchor="#section-4"
+              class="xl:col-span-2 xl:pl-20"
+            >
+              <p
+                class="text-4xl font-semibold text-[#3711DE] xl:text-[5rem]/[1] xl:font-extrabold"
+              >
+                RESIDENTIAL<br />CORE
+              </p>
+              <p
+                class="mt-3 flex h-full items-stretch gap-3 tracking-wider text-white after:my-1.5 after:grow after:bg-gradient-to-r after:from-red-500 after:to-[#611051] after:content-[''] xl:h-auto xl:text-base"
+              >
+                WELL-EQUIPPED COMMUNITY
+              </p>
+              <h2
+                class="my-6 text-2xl font-semibold tracking-widest text-white xl:my-12 xl:text-3xl/snug"
+              >
+                中正西路富饒聚落<br />竹北車站緊鄰其側
+              </h2>
+              <div
+                class="with-triangle bg-gradient-to-tr from-[#2213B5] to-[#7412AE] p-4 text-white xl:p-8 xl:text-[14px]/loose"
+              >
+                竹北火車站旁中正西路隨軌道經濟成住宅聚落核心，沿街小吃林立、生鮮百貨、連鎖手搖。郵局、市民活動中心、市公所等行政機關座落，步行享有便利服務。竹北國小、竹北國中與義民高中等教育機構皆設立於此。
+              </div>
+            </div>
+          </div>
+          <div
+            class="xl:grid xl:grid-cols-5 xl:items-center xl:gap-x-16 2xl:gap-x-24"
+          >
+            <div
+              data-aos="fade-right"
+              data-aos-delay="1700"
+              data-aos-anchor="#section-4"
+              class="relative mb-12 xl:col-span-3 xl:pr-6"
+            >
+              <div
+                class="absolute inset-0 flex -translate-x-10 translate-y-7 flex-col bg-gradient-to-tr from-[#2213B5] to-[#7412AE] pb-10 xl:scale-x-110"
+              ></div>
+              <div
+                class="relative z-[2] after:absolute after:bottom-0 after:right-0 after:p-1.5 after:text-xl after:text-white after:content-[attr(data-caption)]"
+                data-caption="高架示意圖"
+              >
+                <img
+                  src="./assets/高架示意圖.webp"
+                  alt="高架示意圖"
+                  class="aspect-[3/2] object-cover object-center"
+                />
+              </div>
+            </div>
+            <div
+              data-aos="fade-left"
+              data-aos-delay="1900"
+              data-aos-anchor="#section-4"
+              class="xl:order-last xl:col-span-2 xl:pr-20"
+            >
+              <p
+                class="text-4xl font-semibold text-[#3711DE] xl:text-end xl:text-[5rem]/[1] xl:font-extrabold"
+              >
+                EASY<br />COMMUTING
+              </p>
+              <p
+                class="mt-3 flex h-full items-stretch gap-3 tracking-wider text-white after:my-1.5 after:grow after:bg-gradient-to-r after:from-red-500 after:to-[#611051] after:content-[''] xl:h-auto xl:flex-row-reverse xl:text-base xl:after:rotate-180"
+              >
+                CONVENIENT TRANSPORTATION
+              </p>
+              <h2
+                class="my-6 text-2xl font-semibold tracking-widest text-white xl:my-12 xl:text-end xl:text-3xl/snug"
+              >
+                挹注20億台一線替代道路工程<br />30年願景實現 引領繁榮大新竹
+              </h2>
+              <div
+                class="with-triangle bg-gradient-to-tr from-[#2213B5] to-[#7412AE] p-4 text-white xl:p-8 xl:text-[14px]/loose"
+              >
+                台一線替代道路第一期完工後，竹北西區可上高架橋、過頭前溪抵達新竹市區，銜接台68線東西向快速道路，亦可抵達新竹科學園區，減緩市區尖峰時段所致交通瓶頸。
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="section-5" class="with-stable-padding max-xl:!p-0">
+          <div class="xl:flex xl:justify-between">
+            <div
+              data-aos="fade-right"
+              data-aos-delay="300"
+              data-aos-anchor="#section-5"
+            >
+              <h2
+                class="text-4xl font-semibold tracking-wider xl:text-[4.5rem]/tight"
+              >
+                <span class="text-white">CLASSIC</span>
+                <br />
+                <span
+                  class="bg-gradient-to-br from-white from-[50%] via-[#928FB3] via-[70%] to-[#4e4978] to-[90%] bg-clip-text text-transparent"
+                >
+                  PERFORMANCE
+                </span>
+              </h2>
+              <p
+                class="mt-2 flex h-full items-stretch font-semibold text-white after:my-2.5 after:ml-3 after:grow after:bg-gradient-to-r after:from-red-500 after:to-[#611051] after:content-[''] xl:h-auto xl:text-xl"
+              >
+                經典業績
+              </p>
+            </div>
+            <div
+              data-aos="fade-left"
+              data-aos-delay="300"
+              data-aos-anchor="#section-5"
+              class="xl:max-w-[45%] xl:text-end"
+            >
+              <h3
+                class="mt-6 text-3xl font-semibold text-[#00FFDE] xl:mt-2 xl:text-4xl"
+              >
+                好建築須與自然和諧共生
+              </h3>
+              <p
+                class="mt-2 text-xl font-semibold text-white xl:flex xl:items-center xl:justify-end"
+              >
+                <span
+                  class="flex items-center after:mx-3 after:w-6 after:border-b after:border-solid after:border-white after:content-[''] xl:justify-end"
+                >
+                  北部建築設計界翹楚
+                </span>
+                <span class="mt-2 text-2xl max-xl:block xl:mt-0">
+                  卓玲建築師事務所
+                </span>
+              </p>
+              <p class="mt-6 text-white xl:text-[14px]/loose">
+                專注細節、重視自然，好的建築須與自然和諧共生，這是來自建築師卓玲與都浴天夫婦對建築共同的終極理念。細節成就美好，讓建築美學融入自然元素，才能創造出足夠專業的設計，將實用性與美學性揉合成嶄新的建築作品，透過實務經驗逐步內化提升，塑造出具有人文底藴的城市風貌
+              </p>
+            </div>
+          </div>
+          <div class="mt-6 grid gap-y-4 xl:mt-12 xl:grid-cols-2 xl:gap-x-4">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="500"
+              data-aos-anchor="#section-5"
+              class="grid aspect-video w-full place-items-center bg-gray-500 text-white"
+            >
+              業績資料
+            </div>
+            <div
+              data-aos="fade-up"
+              data-aos-delay="500"
+              data-aos-anchor="#section-5"
+              class="grid aspect-video w-full place-items-center bg-gray-500 text-white"
+            >
+              業績資料
+            </div>
+            <div
+              data-aos="fade-up"
+              data-aos-delay="700"
+              data-aos-anchor="#section-5"
+              class="grid aspect-video w-full place-items-center bg-gray-500 text-white"
+            >
+              業績資料
+            </div>
+            <div
+              data-aos="fade-up"
+              data-aos-delay="700"
+              data-aos-anchor="#section-5"
+              class="grid aspect-video w-full place-items-center bg-gray-500 text-white"
+            >
+              業績資料
+            </div>
+          </div>
+        </section>
+
+        <section id="section-6" class="max-w-full">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.541832505774!2d121.00091959999999!3d24.8453374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346836bb16ad3391%3A0x888105a4dfa69cce!2zMzAy5paw56u557ij56u55YyX5biC5ZyL55ub6KGXMS046JmfMyAx!5e0!3m2!1szh-TW!2stw!4v1746536222653!5m2!1szh-TW!2stw"
+            class="aspect-square w-full xl:aspect-[5/2.5]"
+            style="border: 0"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </section>
+
+        <section
+          id="section-7"
+          class="with-stable-padding text-white xl:grid xl:grid-cols-2 xl:gap-x-12"
+        >
+          <div
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-anchor="#section-7"
+          >
+            <h2 class="text-center text-3xl xl:text-start xl:text-base">
+              <span class="mb-2 xl:text-[14px]">Information</span>
+              <br />
+              <span class="text-xl xl:text-2xl">基本資料</span>
+            </h2>
+            <ul
+              class="mb-10 mt-6 space-y-4 text-center xl:mt-12 xl:text-start xl:text-[14px]"
+            >
+              <li class="flex flex-col xl:flex-row xl:gap-10">
+                <span class="max-xl:text-lg">投資興建</span>
+                <span>
+                  鴻奕建設股份有限公司、
+                  <br class="xl:hidden" />
+                  峻勝建設開發股份有限公司
+                </span>
+              </li>
+              <li class="flex flex-col xl:flex-row xl:gap-10">
+                <span class="max-xl:text-lg">基地位置</span>
+                <span>新竹縣竹北市國盛街131號旁</span>
+              </li>
+              <li class="flex flex-col xl:flex-row xl:gap-10">
+                <span class="max-xl:text-lg">使用分區</span>
+                <span>第二種住宅區</span>
+              </li>
+              <li class="flex flex-col xl:flex-row xl:gap-10">
+                <span class="max-xl:text-lg">基地面積</span>
+                <span>約364.07坪</span>
+              </li>
+              <li class="flex flex-col xl:flex-row xl:gap-10">
+                <span class="max-xl:text-lg">建築規劃</span>
+                <span>卓玲建築師事務所</span>
+              </li>
+              <li class="flex flex-col xl:flex-row xl:gap-10">
+                <span class="max-xl:text-lg">公設規劃</span>
+                <span>珩荷空間設計有限公司</span>
+              </li>
+              <li class="flex flex-col xl:flex-row xl:gap-10">
+                <span class="max-xl:text-lg">防水規劃</span>
+                <span>DAISIN 大信防水</span>
+              </li>
+              <li class="flex flex-col xl:flex-row xl:gap-10">
+                <span class="max-xl:text-lg">規劃戶數</span>
+                <span>住家65戶</span>
+              </li>
+              <li class="flex flex-col xl:flex-row xl:gap-10">
+                <span class="max-xl:text-lg">樓層規劃</span>
+                <span>14F/B3</span>
+              </li>
+              <li class="flex flex-col xl:flex-row xl:gap-10">
+                <span class="max-xl:text-lg">坪數規劃</span>
+                <span>21-36坪</span>
+              </li>
+              <li class="flex flex-col xl:flex-row xl:gap-10">
+                <span class="max-xl:text-lg">建築執照</span>
+                <span>112府建字第00017號</span>
+              </li>
+              <li class="flex flex-col xl:flex-row xl:gap-10">
+                <span class="max-xl:text-lg">廣告代銷</span>
+                <span>海宇國際股份有限公司</span>
+              </li>
+            </ul>
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-anchor="#section-7"
+          >
+            <h2
+              class="text-center text-3xl font-semibold xl:text-start xl:text-3xl"
+            >
+              CONTACT US
+            </h2>
+            <form
+              id="form"
+              action=""
+              method="post"
+              class="mb-32 p-5 text-white xl:mt-12 xl:flex xl:flex-wrap xl:gap-x-12 xl:p-0"
+            >
+              <div class="grow space-y-6">
+                <div>
+                  <label for="name" class="sr-only">姓名</label>
+                  <input
+                    id="name"
+                    type="text"
+                    class="w-full border-0 border-b border-white bg-transparent py-4 pl-0 placeholder:text-white focus:ring-0"
+                    placeholder="姓名"
+                  />
+                </div>
+                <div>
+                  <label for="phone" class="sr-only">手機號碼</label>
+                  <input
+                    id="phone"
+                    type="tel"
+                    inputmode="tel"
+                    class="w-full border-0 border-b border-white bg-transparent py-4 pl-0 placeholder:text-white focus:ring-0"
+                    placeholder="手機號碼"
+                  />
+                </div>
+                <div>
+                  <label for="verify" class="sr-only">驗證碼</label>
+                  <input
+                    id="verify"
+                    type="text"
+                    inputmode="numeric"
+                    class="w-full border-0 border-b border-white bg-transparent py-4 pl-0 placeholder:text-white focus:ring-0"
+                    placeholder="驗證碼"
+                  />
+                </div>
+                <button
+                  type="button"
+                  class="w-full bg-white py-2 text-[#110B62] hover:bg-[#DDDDDD] xl:text-lg"
+                >
+                  獲取驗證碼
+                </button>
+              </div>
+              <div class="mt-6 grow space-y-6 xl:mt-0">
+                <div>
+                  <label for="email" class="sr-only">電子郵件</label>
+                  <input
+                    id="email"
+                    type="email"
+                    inputmode="email"
+                    class="w-full border-0 border-b border-white bg-transparent py-4 pl-0 placeholder:text-white focus:ring-0"
+                    placeholder="電子郵件"
+                  />
+                </div>
+                <div data-role="county"></div>
+                <div data-role="district"></div>
+              </div>
+              <div class="xl:mt-10 xl:w-full xl:text-[14px]">
+                <p>您所登錄的個⼈資料將做為以下⽤途</p>
+                <p>
+                  <span class="my-1 max-xl:block">
+                    （⼀）本網站所載之相關事項通知。
+                  </span>
+                  <span class="mb-1 max-xl:block">（⼆）客⼾管理與服務。</span>
+                  <br class="hidden" />
+                  <span class="max-xl:block">
+                    （三）本公司行銷業務之推廣本案實際內容以現場公布為準。
+                  </span>
+                </p>
+                <div class="relative z-[2] mt-6 flex gap-x-2">
+                  <input
+                    type="checkbox"
+                    name="confirm"
+                    id="confirm"
+                    class="mt-0.5 border-white focus:shadow-none focus:ring-0"
+                  />
+                  <label for="confirm">
+                    本人已知悉以上個人資料蒐集聲明事項隱私權聲明以及海悅會員使用者條款
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer
+      class="fixed bottom-0 right-0 z-50 w-full shadow-md md:bottom-auto md:top-0 md:w-auto"
+      style="display: none"
+    >
+      <div class="flex items-stretch justify-between">
+        <a
+          href="#"
+          class="flex flex-1 flex-col items-center justify-center bg-[#211815] px-4 py-2 text-white duration-300 ease-in hover:bg-[#3A2A26] md:bg-[#3A2A26] md:px-3 md:hover:bg-[#211815]"
+        >
+          <div class="mb-2 w-1/3 md:mb-0 md:w-[18px]">
+            <img
+              src="./assets/icon-call-w.png"
+              alt="phone"
+              class="h-auto w-full"
+            />
+          </div>
+          <span class="block text-[12px] text-white md:hidden">立即來電</span>
+        </a>
+        <a
+          href="#"
+          class="flex flex-1 flex-col items-center justify-center bg-[#211815] px-4 py-2 text-white duration-300 ease-in hover:bg-[#3A2A26] md:bg-[#3A2A26] md:px-3 md:hover:bg-[#211815]"
+        >
+          <div class="mb-2 w-1/3 md:mb-0 md:w-[18px]">
+            <img
+              src="./assets/icon-comment-w.png"
+              alt="line"
+              class="h-auto w-full"
+            />
+          </div>
+          <span class="block text-[12px] text-white md:hidden">LINE諮詢</span>
+        </a>
+        <a
+          href="https://maps.app.goo.gl/YbD5DgGKetj9yJhR9"
+          class="flex flex-1 flex-col items-center justify-center bg-[#211815] px-4 py-2 text-white duration-300 ease-in hover:bg-[#3A2A26] md:bg-[#3A2A26] md:px-3 md:hover:bg-[#211815]"
+        >
+          <div class="mb-2 w-1/4 md:mb-0 md:w-[12px]">
+            <img
+              src="./assets/icon-map-w.png"
+              alt="map"
+              class="h-auto w-full"
+            />
+          </div>
+          <span class="block text-[12px] text-white md:hidden">地圖導航</span>
+        </a>
+        <a
+          href="#form"
+          class="flex flex-1 flex-col items-center justify-center bg-[#211815] px-4 py-2 text-white duration-300 ease-in hover:bg-[#3A2A26] md:bg-[#3A2A26] md:px-3 md:hover:bg-[#211815]"
+        >
+          <div class="mb-2 w-1/3 md:mb-0 md:w-[18px]">
+            <img src="./assets/icon-pen-w.png" alt="" class="h-auto w-full" />
+          </div>
+          <span class="block text-[12px] text-white md:hidden">立即預約</span>
+        </a>
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="./assets/vendors/jquery.twzipcode.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        const isMobile = window.innerWidth < 768;
+
+        // 初始化 AOS 庫
+        AOS.init({
+          offset: 200,
+          duration: 1400,
+          once: false, // 允許重複動畫，視需求而定
+          mirror: false, // 禁用鏡像效果
+          disableMutationObserver: true, // 保持啟用，以便動態內容也能正常工作
+        });
+
+        let ticking = false;
+        $(window).on("scroll", () => {
+          if (!ticking) {
+            window.requestAnimationFrame(function () {
+              AOS.refresh();
+              ticking = false;
+            });
+            ticking = true;
+          }
+        });
+
+        function initSwiper(swiperSelector) {
+          $(`${swiperSelector} .swiper-controller`).on("click", (e) => {
+            const $target = $(e.target);
+
+            if (!$target.hasClass("swiper-button")) return;
+
+            $(`${swiperSelector} .swiper-button`).removeClass("active-button");
+            $target.addClass("active-button");
+
+            $(`${swiperSelector} .swiper-img`).removeClass("active-img");
+            const idx = $target.data("idx");
+            $(`${swiperSelector} .swiper-img[data-idx="${idx}"]`).addClass(
+              "active-img",
+            );
+          });
+        }
+
+        initSwiper("#swiper-1");
+        initSwiper("#swiper-2");
+
+        $("#form").twzipcode({
+          zipcodeIntoDistrict: true,
+          css: [
+            "county form-select w-full border-0 border-b border-white bg-transparent py-4 pl-0 placeholder:text-white focus:ring-0",
+            "district form-select w-full border-0 border-b border-white bg-transparent py-4 pl-0 placeholder:text-white focus:ring-0 mb-10 xl:mb-0",
+          ],
+          countyName: "county", // 指定城市 select name
+          districtName: "district", // 指定地區 select name
+        });
+
+        $(".mask").on("touchmove", (el) => {
+          $(el.currentTarget).fadeOut();
+        });
+
+        function listenOnScreen() {
+          // 檢測是否為 iOS 設備
+          const iOS =
+            /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+          // 根據設備類型獲取正確的視口寬度
+          const viewportWidth = iOS ? screen.width : window.innerWidth;
+
+          // 選取所有使用 data-aos 屬性的元素
+          let elements = document.querySelectorAll("[data-aos]");
+
+          // 遍歷所有元素
+          for (let element of elements) {
+            // 檢查元素是否有 data-aos-anchor 屬性
+            if (!element.hasAttribute("data-aos-anchor")) {
+              // 如果元素缺少 data-aos-anchor 屬性，印出元素的標籤名稱、id 和 class
+              console.log(
+                "Element with tag: " +
+                  element.tagName +
+                  ", id: " +
+                  element.id +
+                  ", class: " +
+                  element.className +
+                  " is missing data-aos-anchor attribute.",
+              );
+            }
+          }
+        }
+
+        function toggleFooterVisibility() {
+          const kvHeight = $("#section-1").height();
+          const threshold = kvHeight * 0.55;
+          const scrollTop = $(window).scrollTop();
+
+          if (isMobile && scrollTop > threshold) {
+            $("footer").show();
+          } else {
+            $("footer").hide();
+          }
+        }
+
+        // 绑定滚动事件
+        $(window).on("scroll", () => {
+          toggleFooterVisibility();
+        });
+        // 額外的視窗大小改變事件監聽器
+        $(window).on("resize", () => {
+          AOS.refresh();
+        });
+        $(window).on("resize", listenOnScreen);
+
+        // 初始检查
+        toggleFooterVisibility();
+        listenOnScreen();
+
+        if (isMobile) {
+          // 案名在正中間
+          $("#section-3").scrollLeft(460);
+        }
+      });
+    </script>
+  </body>
+</html>
