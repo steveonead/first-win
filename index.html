@@ -26,12 +26,13 @@
     <title>文化首勝 - 人生的第一場勝利</title>
     <style>
       :root {
-        max-height: 100dvh;
+        max-height: 100vh;
         width: 100%;
         overflow-x: hidden;
         font-family:
           "Bebas Neue", "Microsoft JhengHei", "Noto Sans TC", Arial, Helvetica;
         scroll-behavior: smooth;
+        scroll-padding-top: 4.5rem;
       }
 
       img {
@@ -130,10 +131,6 @@
       }
 
       @media (min-width: 1280px) {
-        :root {
-          scroll-padding-top: 4.5rem;
-        }
-
         .text-vertical {
           writing-mode: vertical-rl;
         }
@@ -188,20 +185,20 @@
               致勝前景
             </a>
           </li>
-          <li class="flex items-center justify-center border-white xl:px-8">
+          <!-- <li class="flex items-center justify-center border-white xl:px-8">
             <a
               href=""
               class="block grow py-10 text-center transition-transform duration-200 hover:scale-110 xl:py-1.5"
             >
               美學團隊
             </a>
-          </li>
+          </li> -->
         </ul>
       </nav>
     </header>
     <main class="max-w-full overflow-x-hidden max-md:pb-16">
       <section id="section-1" class="relative">
-        <picture class="xl:max-h-dvh">
+        <picture class="xl:max-h-vh">
           <source
             media="(min-width: 1280px)"
             srcset="/assets/kv-bg-desktop.webp"
@@ -260,7 +257,7 @@
         <img
           src="./assets/s1-bg-desktop.webp"
           alt="s1-bg"
-          class="min-h-[70dvh] object-cover object-[25%]"
+          class="min-h-[70vh] object-cover object-[25%]"
         />
         <img
           data-aos="fade"
