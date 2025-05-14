@@ -1118,6 +1118,12 @@
           }
         });
 
+        $(".menu a").on("click", () => {
+          if (!$("#burger-menu-button").is(":checked")) return;
+
+          $("#burger-menu-button").click();
+        });
+
         if (isMobile) {
           // 案名在正中間
           $("#section-3").scrollLeft(450);
