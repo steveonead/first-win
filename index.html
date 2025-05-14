@@ -164,38 +164,38 @@
         <ul
           class="menu fixed inset-x-0 bottom-0 top-[4.5rem] z-50 h-0 w-full overflow-hidden overscroll-contain bg-black/90 px-8 text-4xl transition-all duration-300 peer-checked:h-full xl:static xl:flex xl:size-full xl:grow xl:items-center xl:justify-end xl:bg-transparent xl:px-4 xl:text-xl [&>li:not(:last-child)]:border-white/50 max-xl:[&>li:not(:last-child)]:border-b xl:[&>li:not(:last-child)]:border-r"
         >
-          <li class="flex items-center justify-center px-8">
+          <li class="flex items-center justify-center xl:px-8">
             <a
               href="#section-2"
-              class="block py-12 transition-transform duration-200 hover:scale-110 xl:py-1.5"
+              class="block grow py-12 text-center transition-transform duration-200 hover:scale-110 xl:py-1.5"
             >
               成功關鍵
             </a>
           </li>
-          <li class="flex items-center justify-center px-8">
+          <li class="flex items-center justify-center xl:px-8">
             <a
               href="#section-3"
-              class="block py-12 transition-transform duration-200 hover:scale-110 xl:py-1.5"
+              class="block grow py-12 text-center transition-transform duration-200 hover:scale-110 xl:py-1.5"
             >
               必勝機能
             </a>
           </li>
-          <li class="flex items-center justify-center pl-8">
+          <li class="flex items-center justify-center xl:pl-8">
             <a
               href="#section-4"
-              class="block py-12 transition-transform duration-200 hover:scale-110 xl:py-1.5"
+              class="block grow py-12 text-center transition-transform duration-200 hover:scale-110 xl:py-1.5"
             >
               致勝前景
             </a>
           </li>
-          <!-- <li class="flex items-center border-white px-8 justify-center">
+          <li class="flex items-center justify-center border-white xl:px-8">
             <a
               href=""
-              class="block py-10 xl:py-1.5 transition-transform duration-200 hover:scale-110"
+              class="block grow py-10 text-center transition-transform duration-200 hover:scale-110 xl:py-1.5"
             >
               美學團隊
             </a>
-          </li> -->
+          </li>
         </ul>
       </nav>
     </header>
@@ -435,20 +435,44 @@
             class="xl:grid xl:grid-cols-5 xl:items-center xl:gap-x-16 2xl:gap-x-24"
           >
             <div
+              id="swiper-2"
               data-aos="fade-right"
               data-aos-delay="700"
               data-aos-anchor="#section-4"
               class="relative mb-12 xl:col-span-3 xl:pr-6"
             >
               <div
-                class="absolute inset-0 flex -translate-x-10 translate-y-7 flex-col bg-gradient-to-tr from-[#2213B5] to-[#7412AE] pb-10 xl:scale-x-110"
-              ></div>
+                class="swiper-controller absolute inset-0 flex -translate-x-10 translate-y-7 items-end justify-end gap-4 bg-gradient-to-tr from-[#2213B5] to-[#7412AE] pb-1.5 pr-3 xl:scale-x-110 xl:flex-col xl:items-end xl:pb-10 xl:pr-1.5 2xl:pr-3"
+              >
+                <button
+                  type="button"
+                  data-idx="1"
+                  class="swiper-button size-3 rounded-full border-2 border-transparent bg-white"
+                ></button>
+                <button
+                  type="button"
+                  data-idx="0"
+                  class="swiper-button active-button size-3 rounded-full border-2 border-transparent bg-white"
+                ></button>
+              </div>
               <div
-                class="relative z-[2] after:absolute after:bottom-0 after:right-0 after:p-1.5 after:text-xl after:text-white after:content-[attr(data-caption)]"
+                class="active-img swiper-img relative z-[2] after:absolute after:bottom-0 after:right-0 after:p-1.5 after:text-xl after:text-white after:content-[attr(data-caption)]"
+                data-idx="0"
                 data-caption="昌益科技產發園區"
               >
                 <img
                   src="./assets/昌益科技產發園區-1.webp"
+                  alt="昌益科技產發園區"
+                  class="aspect-[3/2] object-cover object-center"
+                />
+              </div>
+              <div
+                class="swiper-img relative z-[2] after:absolute after:bottom-0 after:right-0 after:p-1.5 after:text-xl after:text-white after:content-[attr(data-caption)]"
+                data-idx="1"
+                data-caption="昌益科技產發園區"
+              >
+                <img
+                  src="./assets/昌益科技產發園區-2.webp"
                   alt="昌益科技產發園區"
                   class="aspect-[3/2] object-cover object-center"
                 />
@@ -487,7 +511,7 @@
             class="xl:grid xl:grid-cols-5 xl:items-center xl:gap-x-16 2xl:gap-x-24"
           >
             <div
-              id="swiper-2"
+              id="swiper-3"
               data-aos="fade-left"
               data-aos-delay="1200"
               data-aos-anchor="#section-4"
@@ -1016,6 +1040,7 @@
 
         initSwiper("#swiper-1");
         initSwiper("#swiper-2");
+        initSwiper("#swiper-3");
 
         $("#form").twzipcode({
           zipcodeIntoDistrict: true,
