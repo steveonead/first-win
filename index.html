@@ -31,6 +31,7 @@
         overflow-x: hidden;
         font-family:
           "Bebas Neue", "Microsoft JhengHei", "Noto Sans TC", Arial, Helvetica;
+        scroll-behavior: smooth;
       }
 
       img {
@@ -129,6 +130,10 @@
       }
 
       @media (min-width: 1280px) {
+        :root {
+          scroll-padding-top: 4.5rem;
+        }
+
         .text-vertical {
           writing-mode: vertical-rl;
         }
@@ -147,8 +152,52 @@
   </head>
 
   <body>
-    <header class="sr-only">
-      <h1>文化首勝</h1>
+    <header>
+      <h1 class="sr-only">文化首勝</h1>
+      <nav
+        class="nav-bar fixed top-0 z-50 flex w-full bg-black/50 p-4 text-white"
+      >
+        <label class="ml-auto xl:hidden" for="burger-menu-button">
+          <img src="./assets/burger.svg" alt="burger-menu" class="w-[40px]" />
+        </label>
+        <input type="checkbox" id="burger-menu-button" class="peer hidden" />
+        <ul
+          class="menu fixed inset-x-0 bottom-0 top-[4.5rem] z-50 h-0 w-full overflow-hidden overscroll-contain bg-black/90 px-8 text-4xl transition-all duration-300 peer-checked:h-full xl:static xl:flex xl:size-full xl:grow xl:items-center xl:justify-end xl:bg-transparent xl:px-4 xl:text-xl [&>li:not(:last-child)]:border-white/50 max-xl:[&>li:not(:last-child)]:border-b xl:[&>li:not(:last-child)]:border-r"
+        >
+          <li class="flex items-center justify-center px-8">
+            <a
+              href="#section-2"
+              class="block py-12 transition-transform duration-200 hover:scale-110 xl:py-1.5"
+            >
+              成功關鍵
+            </a>
+          </li>
+          <li class="flex items-center justify-center px-8">
+            <a
+              href="#section-3"
+              class="block py-12 transition-transform duration-200 hover:scale-110 xl:py-1.5"
+            >
+              必勝機能
+            </a>
+          </li>
+          <li class="flex items-center justify-center pl-8">
+            <a
+              href="#section-4"
+              class="block py-12 transition-transform duration-200 hover:scale-110 xl:py-1.5"
+            >
+              致勝前景
+            </a>
+          </li>
+          <!-- <li class="flex items-center border-white px-8 justify-center">
+            <a
+              href=""
+              class="block py-10 xl:py-1.5 transition-transform duration-200 hover:scale-110"
+            >
+              美學團隊
+            </a>
+          </li> -->
+        </ul>
+      </nav>
     </header>
     <main class="max-w-full overflow-x-hidden max-md:pb-16">
       <section id="section-1" class="relative">
@@ -1036,6 +1085,16 @@
         // 初始检查
         toggleFooterVisibility();
         listenOnScreen();
+
+        $("#burger-menu-button").on("change", (e) => {
+          if (e.target.checked) {
+            $(".nav-bar").removeClass("bg-black/50");
+            $(".nav-bar").addClass("bg-black/90");
+          } else {
+            $(".nav-bar").removeClass("bg-black/90");
+            $(".nav-bar").addClass("bg-black/50");
+          }
+        });
 
         if (isMobile) {
           // 案名在正中間
