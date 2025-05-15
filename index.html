@@ -32,7 +32,7 @@
         font-family:
           "Bebas Neue", "Microsoft JhengHei", "Noto Sans TC", Arial, Helvetica;
         scroll-behavior: smooth;
-        scroll-padding-top: 4.5rem;
+        scroll-padding-top: 3.25rem;
       }
 
       img {
@@ -152,19 +152,19 @@
     <header>
       <h1 class="sr-only">文化首勝</h1>
       <nav
-        class="nav-bar fixed top-0 z-50 flex w-full p-4 text-white xl:bg-black/50"
+        class="nav-bar fixed top-0 z-50 flex w-full px-4 py-2 text-white xl:bg-black/50 xl:backdrop-blur-md"
       >
         <label class="ml-auto xl:hidden" for="burger-menu-button">
           <img src="./assets/burger.svg" alt="burger-menu" class="w-[40px]" />
         </label>
         <input type="checkbox" id="burger-menu-button" class="peer hidden" />
         <ul
-          class="menu fixed inset-x-0 bottom-0 top-[4.5rem] z-50 h-0 w-full overflow-hidden overscroll-contain bg-black/90 px-8 text-4xl transition-all duration-300 peer-checked:h-full xl:static xl:flex xl:size-full xl:grow xl:items-center xl:justify-end xl:bg-transparent xl:px-4 xl:text-xl [&>li:not(:last-child)]:border-white/50 max-xl:[&>li:not(:last-child)]:border-b xl:[&>li:not(:last-child)]:border-r"
+          class="menu fixed inset-x-0 bottom-0 top-[3.25rem] z-50 h-0 w-full overflow-hidden overscroll-contain px-8 transition-all duration-300 peer-checked:h-full max-xl:bg-black/60 max-xl:backdrop-blur-md xl:static xl:flex xl:size-full xl:grow xl:items-center xl:justify-end xl:bg-transparent xl:px-4 [&>li:not(:last-child)]:border-white/50 xl:[&>li:not(:last-child)]:border-r"
         >
-          <li class="flex items-center justify-center xl:px-8">
+          <li class="flex items-center justify-center max-xl:mt-10 xl:px-8">
             <a
               href="#section-2"
-              class="block grow py-12 text-center transition-transform duration-200 hover:scale-110 xl:py-1.5"
+              class="block grow py-6 text-center drop-shadow-sm transition-transform duration-200 hover:scale-105 xl:py-1.5"
             >
               成功關鍵
             </a>
@@ -172,23 +172,31 @@
           <li class="flex items-center justify-center xl:px-8">
             <a
               href="#section-3"
-              class="block grow py-12 text-center transition-transform duration-200 hover:scale-110 xl:py-1.5"
+              class="block grow py-6 text-center drop-shadow-sm transition-transform duration-200 hover:scale-105 xl:py-1.5"
             >
               必勝機能
             </a>
           </li>
-          <li class="flex items-center justify-center xl:pl-8">
+          <li class="flex items-center justify-center xl:px-8">
             <a
               href="#section-4"
-              class="block grow py-12 text-center transition-transform duration-200 hover:scale-110 xl:py-1.5"
+              class="block grow py-6 text-center drop-shadow-sm transition-transform duration-200 hover:scale-105 xl:py-1.5"
             >
               致勝前景
             </a>
           </li>
-          <!-- <li class="flex items-center justify-center border-white xl:px-8">
+          <li class="flex items-center justify-center xl:pl-8">
+            <a
+              href="#section-7"
+              class="block grow py-6 text-center drop-shadow-sm transition-transform duration-200 hover:scale-105 xl:py-1.5"
+            >
+              預約鑑賞
+            </a>
+          </li>
+          <!-- <li class="flex items-center justify-center xl:pl-8">
             <a
               href=""
-              class="block grow py-10 text-center transition-transform duration-200 hover:scale-110 xl:py-1.5"
+              class="block grow py-6 text-center transition-transform duration-200 hover:scale-105 xl:py-1.5 drop-shadow-sm"
             >
               美學團隊
             </a>
@@ -672,7 +680,7 @@
               data-aos-anchor="#section-5"
             >
               <h2
-                class="text-4xl font-semibold tracking-wider xl:text-[4.5rem]/tight"
+                class="text-4xl font-semibold tracking-wider xl:text-[3.25rem]/tight"
               >
                 <span class="text-white">CLASSIC</span>
                 <br />
@@ -1107,16 +1115,6 @@
         // 初始检查
         toggleFooterVisibility();
         listenOnScreen();
-
-        $("#burger-menu-button").on("change", (e) => {
-          if (e.target.checked) {
-            $(".nav-bar").addClass("bg-black/90");
-          } else {
-            setTimeout(() => {
-              $(".nav-bar").removeClass("bg-black/90");
-            }, 100);
-          }
-        });
 
         $(".menu a").on("click", () => {
           if (!$("#burger-menu-button").is(":checked")) return;
