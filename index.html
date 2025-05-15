@@ -1102,7 +1102,11 @@
           }
         }
 
-        // 绑定滚动事件
+        if (isMobile) {
+          // 案名在正中間
+          $("#section-3").scrollLeft(450);
+        }
+
         $(window).on("scroll", () => {
           toggleFooterVisibility();
         });
@@ -1121,11 +1125,6 @@
 
           $("#burger-menu-button").click();
         });
-
-        if (isMobile) {
-          // 案名在正中間
-          $("#section-3").scrollLeft(450);
-        }
       });
     </script>
   </body>
