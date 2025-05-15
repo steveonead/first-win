@@ -152,7 +152,7 @@
     <header>
       <h1 class="sr-only">文化首勝</h1>
       <nav
-        class="nav-bar fixed top-0 z-50 flex w-full px-4 py-2 text-white xl:bg-black/50 xl:backdrop-blur-md"
+        class="nav-bar fixed top-0 z-50 flex w-full px-4 py-2 text-white xl:bg-black/25 xl:backdrop-blur-sm"
       >
         <label class="ml-auto xl:hidden" for="burger-menu-button">
           <img src="./assets/burger.svg" alt="burger-menu" class="w-[40px]" />
@@ -179,7 +179,8 @@
           </li>
           <li class="flex items-center justify-center xl:px-8">
             <a
-              href="#section-4"
+              id="scroll-to-easy-commuting"
+              href="#section-5"
               class="block grow py-6 text-center drop-shadow-sm transition-transform duration-200 hover:scale-105 xl:py-1.5"
             >
               致勝前景
@@ -442,7 +443,7 @@
             <div
               id="swiper-2"
               data-aos="fade-right"
-              data-aos-delay="700"
+              data-aos-delay="300"
               data-aos-anchor="#section-4"
               class="relative mb-12 xl:col-span-3 xl:pr-6"
             >
@@ -485,7 +486,7 @@
             </div>
             <div
               data-aos="fade-left"
-              data-aos-delay="900"
+              data-aos-delay="400"
               data-aos-anchor="#section-4"
               class="xl:order-last xl:col-span-2 xl:pr-20"
             >
@@ -518,7 +519,7 @@
             <div
               id="swiper-3"
               data-aos="fade-left"
-              data-aos-delay="1200"
+              data-aos-delay="500"
               data-aos-anchor="#section-4"
               class="relative mb-12 xl:order-last xl:col-span-3 xl:pl-6"
             >
@@ -593,7 +594,7 @@
             </div>
             <div
               data-aos="fade-right"
-              data-aos-delay="1500"
+              data-aos-delay="600"
               data-aos-anchor="#section-4"
               class="xl:col-span-2 xl:pl-20"
             >
@@ -624,7 +625,7 @@
           >
             <div
               data-aos="fade-right"
-              data-aos-delay="1700"
+              data-aos-delay="700"
               data-aos-anchor="#section-4"
               class="relative mb-12 xl:col-span-3 xl:pr-6"
             >
@@ -643,8 +644,9 @@
               </div>
             </div>
             <div
+              id="easy-commuting"
               data-aos="fade-left"
-              data-aos-delay="1900"
+              data-aos-delay="800"
               data-aos-anchor="#section-4"
               class="xl:order-last xl:col-span-2 xl:pr-20"
             >
@@ -1101,6 +1103,17 @@
             $("footer").hide();
           }
         }
+
+        $("#scroll-to-easy-commuting").on("click", (e) => {
+          e.preventDefault();
+
+          const target = $("#easy-commuting");
+          const offset = window.innerWidth < 1280 ? 20 : 100;
+          window.scrollTo({
+            top: target.offset().top - offset,
+            behavior: "smooth",
+          });
+        });
 
         if (isMobile) {
           // 案名在正中間
