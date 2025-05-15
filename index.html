@@ -152,7 +152,7 @@
     <header>
       <h1 class="sr-only">文化首勝</h1>
       <nav
-        class="nav-bar fixed top-0 z-50 flex w-full bg-black/50 p-4 text-white"
+        class="nav-bar fixed top-0 z-50 flex w-full p-4 text-white xl:bg-black/50"
       >
         <label class="ml-auto xl:hidden" for="burger-menu-button">
           <img src="./assets/burger.svg" alt="burger-menu" class="w-[40px]" />
@@ -1110,11 +1110,11 @@
 
         $("#burger-menu-button").on("change", (e) => {
           if (e.target.checked) {
-            $(".nav-bar").removeClass("bg-black/50");
             $(".nav-bar").addClass("bg-black/90");
           } else {
-            $(".nav-bar").removeClass("bg-black/90");
-            $(".nav-bar").addClass("bg-black/50");
+            setTimeout(() => {
+              $(".nav-bar").removeClass("bg-black/90");
+            }, 100);
           }
         });
 
