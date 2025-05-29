@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+TC:wght@100..900&display=swap"
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -29,8 +29,7 @@
         max-height: 100vh;
         width: 100%;
         overflow-x: hidden;
-        font-family:
-          "Bebas Neue", "Microsoft JhengHei", "Noto Sans TC", Arial, Helvetica;
+        font-family: "Bebas Neue", "Noto Sans TC", Arial, Helvetica;
         scroll-behavior: smooth;
         scroll-padding-top: 3.25rem;
       }
@@ -207,12 +206,16 @@
     </header>
     <main class="max-w-full overflow-x-hidden max-md:pb-16">
       <section id="section-1" class="relative">
-        <picture class="xl:max-h-vh">
+        <picture>
           <source
             media="(min-width: 1280px)"
             srcset="/assets/kv-bg-desktop.webp"
           />
-          <img src="./assets/kv-bg-mobile.webp" alt="bg" />
+          <img
+            src="./assets/kv-bg-mobile.webp"
+            alt="bg"
+            class="min-h-screen object-cover object-right-bottom"
+          />
         </picture>
         <img
           src="./assets/kv-float.webp"
@@ -220,7 +223,7 @@
           data-aos="fade-left"
           data-aos-delay="500"
           data-aos-anchor="#section-1"
-          class="absolute bottom-0 right-0 z-10 max-w-[28%] object-cover xl:max-w-60"
+          class="absolute bottom-0 right-0 z-10 hidden max-w-[28%] object-cover xl:block xl:max-w-60"
         />
         <img
           data-aos="fade"
@@ -266,7 +269,7 @@
         <img
           src="./assets/s1-bg-desktop.webp"
           alt="s1-bg"
-          class="min-h-[70vh] object-cover object-[25%]"
+          class="min-h-screen object-cover object-[25%] xl:min-h-[70vh]"
         />
         <img
           data-aos="fade"
@@ -276,7 +279,9 @@
           alt="s1-gradient-desktop"
           class="absolute inset-0 hidden h-full object-cover xl:block"
         />
-        <div class="absolute inset-0 bg-[rgba(28,42,148,0.6)] xl:hidden"></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-br from-[#1F2D89] from-25% via-[#1F2D89]/60 via-40% to-transparent to-100% xl:hidden"
+        ></div>
         <div
           class="with-stable-padding absolute inset-0 xl:ms-auto xl:flex xl:max-w-[50%] xl:flex-col xl:items-end xl:justify-center xl:text-end"
         >
