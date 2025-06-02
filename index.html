@@ -26,12 +26,21 @@
     <title>文化首勝 - 人生的第一場勝利</title>
     <style>
       :root {
-        max-height: 100vh;
         width: 100%;
         overflow-x: hidden;
         font-family: "Bebas Neue", "Noto Sans TC", Arial, Helvetica;
         scroll-behavior: smooth;
         scroll-padding-top: 3.25rem;
+      }
+
+      html {
+        height: 100%;
+        overflow-y: scroll;
+      }
+
+      section {
+        width: 100%;
+        overflow-x: hidden;
       }
 
       img {
@@ -124,6 +133,16 @@
       }
 
       @media (min-width: 1024px) {
+        html {
+          overflow-y: scroll;
+          scroll-snap-type: y proximity;
+        }
+
+        section {
+          scroll-snap-align: start;
+          scroll-snap-stop: always;
+        }
+
         .with-stable-padding {
           padding: 6rem 8rem;
         }
@@ -204,7 +223,7 @@
         </ul>
       </nav>
     </header>
-    <main class="max-w-full overflow-x-hidden max-md:pb-16">
+    <main class="max-w-full max-md:pb-16">
       <section id="section-1" class="relative">
         <picture>
           <source
@@ -769,8 +788,8 @@
 
         <section id="section-6" class="max-w-full">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1702.0733968707186!2d121.00288311041278!3d24.841403237732273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDUwJzMxLjMiTiAxMjHCsDAwJzE3LjYiRQ!5e0!3m2!1szh-TW!2stw!4v1746783426140!5m2!1szh-TW!2stw"
-            class="aspect-square w-full xl:aspect-[5/2.5]"
+            src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d1810.3206522828539!2d121.00454667724611!3d24.841937445217667!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDUwJzMxLjMiTiAxMjHCsDAwJzE3LjYiRQ!5e0!3m2!1szh-TW!2stw!4v1748841000711!5m2!1szh-TW!2stw"
+            class="aspect-[4/3] w-full xl:aspect-[2/1]"
             style="border: 0"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
@@ -1047,6 +1066,36 @@
               "active-img",
             );
           });
+          // touch swipe support on mobile
+          if (isMobile) {
+            let startX = 0;
+            $(`${swiperSelector}`).on("touchstart", (e) => {
+              startX = e.touches[0].clientX;
+            });
+            $(`${swiperSelector}`).on("touchend", (e) => {
+              const endX = e.changedTouches[0].clientX;
+              if (Math.abs(endX - startX) < 50) return;
+              const direction = endX > startX ? "prev" : "next";
+              const $buttons = $(`${swiperSelector} .swiper-button`);
+              const $activeBtn = $buttons.filter(".active-button");
+              const currentIdx = $activeBtn.data("idx");
+              const count = $buttons.length;
+              const newIdx =
+                direction === "next"
+                  ? (currentIdx + 1) % count
+                  : (currentIdx - 1 + count) % count;
+              $(`${swiperSelector} .swiper-button`).removeClass(
+                "active-button",
+              );
+              $(
+                `${swiperSelector} .swiper-button[data-idx="${newIdx}"]`,
+              ).addClass("active-button");
+              $(`${swiperSelector} .swiper-img`).removeClass("active-img");
+              $(`${swiperSelector} .swiper-img[data-idx="${newIdx}"]`).addClass(
+                "active-img",
+              );
+            });
+          }
         }
 
         initSwiper("#swiper-1");
